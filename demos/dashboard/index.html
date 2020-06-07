@@ -446,7 +446,7 @@ input[disabled], button[disabled] {
     </table>
   </section>
 
-  <footer style="text-align: center;">Dashboard + Video Conferencing + Chat + File Sharing</footer>
+  <footer style="text-align: center;">Hrichik Meet</footer>
 
 <script>
 // this object is used to get uniquie rooms based on this demo
@@ -488,7 +488,7 @@ function updateListOfRooms(rooms) {
     $('#rooms-list').html('');
 
     if (!rooms.length) {
-        $('#rooms-list').html('<tr><td colspan=9>No active room found for this demo.</td></tr>');
+        $('#rooms-list').html('<tr><td colspan=9>No active/visible room found on this server.😑</td></tr>');
         return;
     }
 
@@ -601,7 +601,7 @@ function joinAHiddenRoom(roomid) {
 
     connection.checkPresence(roomid, function(isRoomExist) {
         if (isRoomExist === false) {
-            alertBox('No such room exist on this server. Room-id: ' + roomid, 'Room Not Found');
+            alertBox('No such room exist on this server. Room-id: ' + roomid, 'Room Not Found. Make This Your Own Room');
             $('#btn-join-hidden-room').html(initialHTML).prop('disabled', false);
             return;
         }
@@ -719,7 +719,7 @@ $('#btn-create-room').click(function() {
 
     connection.checkPresence(roomid, function(isRoomExist) {
         if (isRoomExist === true) {
-            alertBox('This room-id is already taken and room is active. Please join instead.', 'Room ID In Use');
+            alertBox('This room-id is already taken and room is active. Please join instead.', 'ERR_Room ID In Use');
             return;
         }
 
