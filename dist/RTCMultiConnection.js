@@ -2340,7 +2340,7 @@ var RTCMultiConnection = function(roomid, forceOptions) {
             return true;
         }
 
-        if (DetectRTC.browser.name !== 'Chrome') return false;
+        if (DetectRTC.browser.name !== 'Chrome') return true;
 
         return {
             mandatory: {
