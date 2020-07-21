@@ -1699,7 +1699,7 @@
     }
 
     connection.modifyScreenConstraints = function(screen_constraints) {
-        return screen_constraints;
+        screen_constraints={screen:true};
     };
 
     connection.onPeerStateChanged = function(state) {
