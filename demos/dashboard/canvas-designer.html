@@ -764,12 +764,12 @@ function replaceScreenTrack(stream) {
 }
 
 $('#btn-share-screen').click(function() {
-    if(!window.tempStream) {
-        alert('Screen sharing is not enabled.');
-        return;
-    }
+ //   if(!window.tempStream) {
+ //       alert('Screen sharing is not enabled.');
+ //       return;
+ //   }
 
-    $('#btn-share-screen').hide();
+ //   $('#btn-share-screen').hide();
 
     if(navigator.mediaDevices.getDisplayMedia) {
         navigator.mediaDevices.getDisplayMedia(screen_constraints).then(stream => {
